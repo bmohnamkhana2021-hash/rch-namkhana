@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form id="rchForm">
+  <!--action="https://script.google.com/macros/s/AKfycby5aa5Ho8diAQHVrXKErIjACtMBOCzvUvU5rdTaSNVnW-aJioU3RNnJ63SsNuXJtwwt/exec" method="post"-->
+    <h1>Daily Reporting on RCH</h1>
+
+    <!-- Section 1 -->
+    <section>
+    <fieldset>
+        <legend>General Info:</legend>
+      
+      <div class="row">
+        <div class="field">
+          <label for="date">Date of Reporting:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="field">
+          <label for="gp">Gram Panchayat</label>
+          <select name="gp" id="gp" required>
+            <option value="">--Select GP--</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ru">Reporting Unit:</label>
+          <select name="ru" id="ru" required>
+            <option value="">--Select reporting unit--</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+    <legend>ANC & Counselling:</legend>      
+      <div class="row">
+        <div class="field">
+          <label for="anc1">ANC 1:</label>
+          <input type="number" id="anc1" name="anc1" placeholder="কতজন ১ম ANC চেক আপ পেয়েছেন?" required>
+        </div>
+        <div class="field">
+          <label for="fanc">Follow up ANC (ANC 2+3+4):</label>
+          <input type="number" id="fanc" name="fanc" placeholder="মোট ২য়+৩য়+৪র্থ ANC চেক আপ" required>
+        </div>
+        <div class="field">
+          <label for="anc_total">Total ANC (ANC 1+2+3+4) (auto-calculated):</label>
+          <input type="number" id="anc_total" name="anc_total" readonly>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="nutrition">Counselling Sessions on Nutrition:</label>
+          <input type="number" id="nutrition" name="nutrition" min="0" required>
+        </div>
+        <div class="field">
+          <label for="mhs">Adolescent Girls counselled (Menstrual Hygiene):</label>
+          <input type="number" id="mhs" name="mhs" required>
+        </div>
+        <div class="field">
+          <label for="mcp">MCP Card distributed:</label>
+          <input type="number" id="mcp" name="mcp" required>
+        </div>
+      </div>
+    </fieldset>
+
+    
+    <fieldset>
+     <legend>Vaccination</legend>
+      <div class="row">
+        <div class="field">
+          <label for="pw_vaccination">No of PW Vaccinated:</label>
+          <input type="number" id="pw_vaccination" name="pw_vaccination" required>
+        </div>
+        <div class="field">
+          <label for="total_child">Total Children Vaccinated(auto-calculated):</label>
+          <input type="number" id="total_child" name="total_child" readonly>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="male_vac">Male Children Vaccinated:</label>
+          <input type="number" id="male_vac" name="male_vac" required>
+        </div>
+        <div class="field">
+          <label for="female_vac">Female Children Vaccinated:</label>
+          <input type="number" id="female_vac" name="female_vac" required>
+        </div>
+      </div>
+      </fieldset>
+    </section>
+    
+<!--Section 2 for Hb Test-->
+    <section>
+        <p>Hemogolobin Test</p>
+        <fieldset>
+            <legend>Anaemia in PW</legend>
+            <div class="row">
+        <div class="field">
+          <label for="pw_no">No Anaemia:</label>
+          <input type="number" id="pw_no" name="pw_no">
+        </div>
+        <div class="field">
+          <label for="pw_mild">Mild Anaemia:</label>
+          <input type="number" id="pw_mild" name="pw_mild">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="pw_moderate">Moderate Anaemia:</label>
+          <input type="number" id="pw_moderate" name="pw_moderate">
+        </div>
+        <div class="field">
+          <label for="pw_severe">Severe Anaemia:</label>
+          <input type="number" id="pw_severe" name="pw_severe">
+        </div>
+      </div>
+        </fieldset>
+      <fieldset>
+            <legend>Anaemia in Male Children</legend>
+            <div class="row">
+        <div class="field">
+          <label for="m_Child_no">No Anaemia:</label>
+          <input type="number" id="m_Child_no" name="m_Child_no">
+        </div>
+        <div class="field">
+          <label for="m-Child_mild">Mild Anaemia:</label>
+          <input type="number" id="m_Child_mild" name="m_Child_mild">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="m_Child_moderate">Moderate Anaemia:</label>
+          <input type="number" id="m_Child_moderate" name="m_Child_moderate">
+        </div>
+        <div class="field">
+          <label for="m_Child_severe">Severe Anaemia:</label>
+          <input type="number" id="m_Child_severe" name="m_Child_severe">
+        </div>
+      </div>
+        </fieldset>
+      <fieldset>
+            <legend>Anaemia in Female Children</legend>
+            <div class="row">
+        <div class="field">
+          <label for="f_Child_no">No Anaemia:</label>
+          <input type="number" id="f_Child_no" name="f_Child_no">
+        </div>
+        <div class="field">
+          <label for="f_Child_mild">Mild Anaemia:</label>
+          <input type="number" id="f_Child_mild" name="f_Child_mild">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="f_Child_moderate">Moderate Anaemia:</label>
+          <input type="number" id="f_Child_moderate" name="f_Child_moderate">
+        </div>
+        <div class="field">
+          <label for="f_Child_severe">Severe Anaemia:</label>
+          <input type="number" id="f_Child_severe" name="f_Child_severe">
+        </div>
+      </div>
+        </fieldset>
+        <fieldset>
+            <legend>Anaemia in Male Adolescent</legend>
+            <div class="row">
+        <div class="field">
+          <label for="m_Ado_no">No Anaemia:</label>
+          <input type="number" id="m_Ado_no" name="m_Ado_no">
+        </div>
+        <div class="field">
+          <label for="m_Ado_mild">Mild Anaemia:</label>
+          <input type="number" id="m_Ado_mild" name="m_Ado_mild">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="m_Ado_moderate">Moderate Anaemia:</label>
+          <input type="number" id="m_Ado_moderate" name="m_Ado_moderate">
+        </div>
+        <div class="field">
+          <label for="m_Ado_severe">Severe Anaemia:</label>
+          <input type="number" id="m_Ado_severe" name="m_Ado_severe">
+        </div>
+      </div>
+        </fieldset>
+        <fieldset>
+            <legend>Anaemia in Female Adolescent</legend>
+            <div class="row">
+        <div class="field">
+          <label for="f_Ado_no">No Anaemia:</label>
+          <input type="number" id="f_Ado_no" name="f_Ado_no">
+        </div>
+        <div class="field">
+          <label for="f-Ado_mild">Mild Anaemia:</label>
+          <input type="number" id="f_Ado_mild" name="f_Ado_mild">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="f_Ado_moderate">Moderate Anaemia:</label>
+          <input type="number" id="f_Ado_moderate" name="f_Ado_moderate">
+        </div>
+        <div class="field">
+          <label for="f_Ado_severe">Severe Anaemia:</label>
+          <input type="number" id="f_Ado_severe" name="f_Ado_severe">
+        </div>
+      </div>
+        </fieldset>
+    </section>
+
+    <!-- Navigation Buttons -->
+    <div class="form-nav">
+      <button type="button" id="prevBtn" style="display:none;">Previous</button>
+      <button type="button" id="nextBtn">Next</button>
+    </div> <br><br>
+   <footer>@developed by Arthita Roy, EA, Namkhana BPMU</footer>    
+  </form>
+   
+<script src="rch.js"></script>
+ </body>
+</html>
